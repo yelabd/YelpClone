@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4653AA1A1E53C50D00790B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653AA191E53C50D00790B60 /* AppDelegate.swift */; };
-		4653AA1C1E53C50D00790B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653AA1B1E53C50D00790B60 /* ViewController.swift */; };
 		4653AA1F1E53C50D00790B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4653AA1D1E53C50D00790B60 /* Main.storyboard */; };
 		4653AA211E53C50D00790B60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4653AA201E53C50D00790B60 /* Assets.xcassets */; };
 		4653AA241E53C50D00790B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4653AA221E53C50D00790B60 /* LaunchScreen.storyboard */; };
 		4653AA2F1E53C50D00790B60 /* YelpCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653AA2E1E53C50D00790B60 /* YelpCloneTests.swift */; };
 		4653AA3A1E53C50D00790B60 /* YelpCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4653AA391E53C50D00790B60 /* YelpCloneUITests.swift */; };
+		46BC95401E58F7A900C4687E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC953F1E58F7A900C4687E /* MainViewController.swift */; };
+		46BC95451E58FBBD00C4687E /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC95441E58FBBD00C4687E /* BusinessCell.swift */; };
+		46BC95471E58FBD700C4687E /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC95461E58FBD700C4687E /* Business.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		4653AA161E53C50D00790B60 /* YelpClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4653AA191E53C50D00790B60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4653AA1B1E53C50D00790B60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4653AA1E1E53C50D00790B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4653AA201E53C50D00790B60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4653AA231E53C50D00790B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		4653AA351E53C50D00790B60 /* YelpCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4653AA391E53C50D00790B60 /* YelpCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpCloneUITests.swift; sourceTree = "<group>"; };
 		4653AA3B1E53C50D00790B60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46BC953F1E58F7A900C4687E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		46BC95441E58FBBD00C4687E /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		46BC95461E58FBD700C4687E /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,10 @@
 		4653AA181E53C50D00790B60 /* YelpClone */ = {
 			isa = PBXGroup;
 			children = (
+				46BC95411E58F7AF00C4687E /* ViewControllers */,
+				46BC95431E58FB8900C4687E /* Views */,
+				46BC95421E58FB8200C4687E /* Models */,
 				4653AA191E53C50D00790B60 /* AppDelegate.swift */,
-				4653AA1B1E53C50D00790B60 /* ViewController.swift */,
 				4653AA1D1E53C50D00790B60 /* Main.storyboard */,
 				4653AA201E53C50D00790B60 /* Assets.xcassets */,
 				4653AA221E53C50D00790B60 /* LaunchScreen.storyboard */,
@@ -123,6 +129,30 @@
 				4653AA3B1E53C50D00790B60 /* Info.plist */,
 			);
 			path = YelpCloneUITests;
+			sourceTree = "<group>";
+		};
+		46BC95411E58F7AF00C4687E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				46BC953F1E58F7A900C4687E /* MainViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		46BC95421E58FB8200C4687E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46BC95461E58FBD700C4687E /* Business.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		46BC95431E58FB8900C4687E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46BC95441E58FBBD00C4687E /* BusinessCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4653AA1C1E53C50D00790B60 /* ViewController.swift in Sources */,
 				4653AA1A1E53C50D00790B60 /* AppDelegate.swift in Sources */,
+				46BC95471E58FBD700C4687E /* Business.swift in Sources */,
+				46BC95401E58F7A900C4687E /* MainViewController.swift in Sources */,
+				46BC95451E58FBBD00C4687E /* BusinessCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +535,7 @@
 				4653AA401E53C50D00790B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4653AA411E53C50D00790B60 /* Build configuration list for PBXNativeTarget "YelpCloneTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +544,7 @@
 				4653AA431E53C50D00790B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4653AA441E53C50D00790B60 /* Build configuration list for PBXNativeTarget "YelpCloneUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +553,7 @@
 				4653AA461E53C50D00790B60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
