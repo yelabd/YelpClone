@@ -164,6 +164,24 @@
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="21.139430284857571"/>
         </scene>
+        <!--Indv Business View Controller-->
+        <scene sceneID="9ff-D0-1Pp">
+            <objects>
+                <viewController id="Z4g-pH-rzg" customClass="IndvBusinessViewController" customModule="YelpClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qce-xc-cR0"/>
+                        <viewControllerLayoutGuide type="bottom" id="Puy-qf-w6c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xqX-Ty-2ee">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHm-AZ-hLt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="702"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="IuY-Gm-R4N">
             <objects>
@@ -195,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LCJ-PN-Oog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1805.5999999999999" y="-101.19940029985008"/>
+            <point key="canvasLocation" x="1785" y="21"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FPf-2h-mjE">
