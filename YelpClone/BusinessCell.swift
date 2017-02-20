@@ -19,6 +19,8 @@ class BusinessCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var ratingView: UIView!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     var business : Business! {
         didSet{
@@ -28,6 +30,21 @@ class BusinessCell: UITableViewCell {
             addressLabel.text = business.location
             typeLabel.text = business.type
             distanceLabel.text = String(format: "%.0f m",business.distance)
+            priceLabel.text = business.price
+            ratingLabel.text = String(business.rating)
+            
+            self.ratingView.layer.borderWidth = 1
+//            self.ratingView.layer.borderColor =
+            
+//            if (business.rating < 4.0 && business.rating > 2){
+//                let yellowColor = UIColor(red: 255/255.0, green: 223/255.0, blue: 0/255.0, alpha: 1.0)
+//                self.ratingView.backgroundColor = yellowColor
+//            }else if(business.rating <= 2){
+//                self.ratingView.backgroundColor = UIColor.red
+//            }
+            
+            print("\(business.name): \(business.rating)")
+
             
         }
     }
@@ -36,6 +53,11 @@ class BusinessCell: UITableViewCell {
         super.awakeFromNib()
         pictureImageView.layer.cornerRadius = 3
         pictureImageView.clipsToBounds = true
+        ratingView.layer.cornerRadius = 10
+        
+       
+        
+        
         // Initialization code
     }
 
