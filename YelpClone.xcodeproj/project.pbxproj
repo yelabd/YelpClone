@@ -17,6 +17,8 @@
 		46BC95401E58F7A900C4687E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC953F1E58F7A900C4687E /* MainViewController.swift */; };
 		46BC95451E58FBBD00C4687E /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC95441E58FBBD00C4687E /* BusinessCell.swift */; };
 		46BC95471E58FBD700C4687E /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BC95461E58FBD700C4687E /* Business.swift */; };
+		46BF2B471E5A992600B7CC6E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2B461E5A992600B7CC6E /* MapViewController.swift */; };
+		46BF2B491E5B865300B7CC6E /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BF2B481E5B865300B7CC6E /* PinAnnotation.swift */; };
 		57D97B002E07F6389FEC6506 /* Pods_YelpCloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADDE06A6BC33EEBEE1FC23F /* Pods_YelpCloneUITests.framework */; };
 		BF5BB9CD1AFE41885A15EB17 /* Pods_YelpClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 242A7E657BB22B22FA366D54 /* Pods_YelpClone.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		46BC953F1E58F7A900C4687E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		46BC95441E58FBBD00C4687E /* BusinessCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
 		46BC95461E58FBD700C4687E /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		46BF2B461E5A992600B7CC6E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		46BF2B481E5B865300B7CC6E /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		5102F759196969C5DEC7FF94 /* Pods-YelpClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpClone.release.xcconfig"; path = "Pods/Target Support Files/Pods-YelpClone/Pods-YelpClone.release.xcconfig"; sourceTree = "<group>"; };
 		CE4484C61B94C2C787E7012D /* Pods-YelpCloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpCloneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YelpCloneUITests/Pods-YelpCloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DBEE7A83F106CB7E9D7CD40D /* Pods-YelpClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpClone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YelpClone/Pods-YelpClone.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				4653AA201E53C50D00790B60 /* Assets.xcassets */,
 				4653AA221E53C50D00790B60 /* LaunchScreen.storyboard */,
 				4653AA251E53C50D00790B60 /* Info.plist */,
+				46BF2B481E5B865300B7CC6E /* PinAnnotation.swift */,
 			);
 			path = YelpClone;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				46BC953F1E58F7A900C4687E /* MainViewController.swift */,
+				46BF2B461E5A992600B7CC6E /* MapViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 				TargetAttributes = {
 					4653AA151E53C50D00790B60 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 947H8H8XTC;
 						ProvisioningStyle = Automatic;
 					};
 					4653AA291E53C50D00790B60 = {
@@ -479,6 +486,8 @@
 				4653AA1A1E53C50D00790B60 /* AppDelegate.swift in Sources */,
 				46BC95471E58FBD700C4687E /* Business.swift in Sources */,
 				46BC95401E58F7A900C4687E /* MainViewController.swift in Sources */,
+				46BF2B471E5A992600B7CC6E /* MapViewController.swift in Sources */,
+				46BF2B491E5B865300B7CC6E /* PinAnnotation.swift in Sources */,
 				46BC95451E58FBBD00C4687E /* BusinessCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,6 +639,7 @@
 			baseConfigurationReference = DBEE7A83F106CB7E9D7CD40D /* Pods-YelpClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 947H8H8XTC;
 				INFOPLIST_FILE = YelpClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = youssefelabd.com.YelpClone;
@@ -643,6 +653,7 @@
 			baseConfigurationReference = 5102F759196969C5DEC7FF94 /* Pods-YelpClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 947H8H8XTC;
 				INFOPLIST_FILE = YelpClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = youssefelabd.com.YelpClone;

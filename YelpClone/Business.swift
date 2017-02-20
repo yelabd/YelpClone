@@ -20,6 +20,8 @@ class Business: NSObject {
     var type:String = ""
     var imageURL:URL?
     var review : String = ""
+    var xCoordinate : Double = 0.0
+    var yCoordinate : Double = 0.0
     
     init(json: JSON){
         name = json["name"].stringValue
@@ -31,6 +33,11 @@ class Business: NSObject {
         let tempimageURL = json["image_url"].stringValue
         imageURL = URL(string: tempimageURL)
         review = json["review_count"].stringValue
+        xCoordinate = json["coordinates"]["latitude"].doubleValue
+        print(xCoordinate)
+        //print("y : \(yCoordinate)")
+        yCoordinate = json["coordinates"]["longitude"].doubleValue
+        print("y : \(yCoordinate)")
         
         
         let types = json["categories"].arrayValue
@@ -41,7 +48,7 @@ class Business: NSObject {
             }else{
                 self.type.append(", \(thisType["alias"].stringValue)")
             }
-            print(self.type)
+            //print(self.type)
         }
     }
 

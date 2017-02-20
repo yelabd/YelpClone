@@ -55,6 +55,8 @@ class BusinessCell: UITableViewCell {
         pictureImageView.clipsToBounds = true
         ratingView.layer.cornerRadius = 10
         
+        titleLabel.preferredMaxLayoutWidth = titleLabel.frame.size.width
+        
        
         
         

@@ -10,11 +10,12 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 
-class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
     var businesses: [Business?] = []
+    var filteredBusinesses: [Business?] = []
     var token : String?
     let clientID = "brKTMeHemIXkaxGaFLVKnQ"
     let secret = "NIbKBlSyf5oFuGrjMW0ORnkG0rKAIBFnjOWkbm6Z9A0sKNQmC2g0KccVU0P3EpGs"
@@ -26,12 +27,12 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func viewDidLoad() {
         super.viewDidLoad()
          navigationController?.navigationBar.barTintColor = UIColor.red
-        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 150
         getToken()
+        createSearchBar()
 
         // Do any additional setup after loading the view.
     }
@@ -44,7 +45,7 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         
-        return businesses.count
+        return filteredBusinesses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -52,7 +53,7 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
         let row = indexPath.row
         
-        guard let businessInfo = businesses[row] else {
+        guard let businessInfo = filteredBusinesses[row] else {
             return cell
         }
         
@@ -106,7 +107,7 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
                     let businessInfo = Business(json: business)
                     self.businesses.append(businessInfo)
                 }
-                
+                self.filteredBusinesses = self.businesses
                 self.tableView.reloadData()
                 //self.token = json["access_token"].stringValue
             }else {
@@ -116,6 +117,52 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         }
         
     }
+    
+    func createSearchBar(){
+        let searchBar = UISearchBar()
+        searchBar.delegate = self
+        searchBar.showsCancelButton = true
+        self.navigationItem.titleView = searchBar
+        searchBar.tintColor = UIColor.white
+        
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        
+        self.filteredBusinesses = searchText.isEmpty ? self.businesses : businesses.filter({(dataString: Business?) -> Bool in
+            
+            // If dataItem matches the searchText, return true to include it
+            let businessTitle = dataString!.name
+            return businessTitle.range(of: searchText, options: .caseInsensitive) != nil
+        })
+        
+        self.tableView.reloadData()
+        
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        //self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        //        searchBar.showsCancelButton = false
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+    }
+    
+    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        // Create a variable that you want to send
+
+        let destination = segue.destination as! MapViewController
+    
+        print("what \(self.businesses.count)")
+        destination.businesses = self.businesses
+    }
+}
+
+
 
 
     
@@ -130,4 +177,4 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     */
 
-}
+
