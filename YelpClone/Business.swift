@@ -18,6 +18,10 @@ class Business: NSObject {
     var distance:Double = 0.0
     var phoneNumber:String = ""
     var type:String = ""
+    var zip: String = ""
+    var city : String = ""
+    var state : String = ""
+    var phone: String = ""
     var imageURL:URL?
     var review : String = ""
     var xCoordinate : Double = 0.0
@@ -27,6 +31,10 @@ class Business: NSObject {
         name = json["name"].stringValue
         price  = json["price"].stringValue
         location = "\(json["location"]["address1"].stringValue)"
+        zip = json["location"]["zip_code"].stringValue
+        state = json["location"]["state"].stringValue
+        city = json["location"]["city"].stringValue
+        phone = json["phone"].stringValue
         rating = json["rating"].doubleValue
         distance = json["distance"].doubleValue
         phoneNumber = json["phone"].stringValue
@@ -37,7 +45,7 @@ class Business: NSObject {
         print(xCoordinate)
         //print("y : \(yCoordinate)")
         yCoordinate = json["coordinates"]["longitude"].doubleValue
-        print("y : \(yCoordinate)")
+//        print("y : \(yCoordinate)")
         
         
         let types = json["categories"].arrayValue

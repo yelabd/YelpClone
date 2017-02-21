@@ -160,7 +160,37 @@ class MainViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         print("what \(self.businesses.count)")
         destination.businesses = self.businesses
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ibvcSegue" {
+            let cell = sender as! BusinessCell
+            
+            let destination = segue.destination as! IndvBusinessViewController
+            
+            let row = self.tableView.indexPath(for: cell)?.row
+            
+            let business = self.filteredBusinesses[row!]
+            
+            //        let title = movie?["title"] as! String
+            //        let overview = movie?["overview"] as! String
+            //        let posterPath = movie?["poster_path"] as! String
+            //        let rating = movie?["vote_average"] as! Double
+            
+            //        let movieInfoArray = [title,overview,posterPath,rating] as [Any]
+            destination.business = business
+
+        }
+        
+        
+        
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+
 }
+
+
 
 
 
