@@ -4,30 +4,18 @@
 
 ## User Stories
 
-The following **required** functionality is completed:
-
 - [X] Table rows for search results should be dynamic height according to the content height.
 - [X] Custom cells should have the proper Auto Layout constraints.
 - [X] Search bar should be in the navigation bar (doesn't have to expand to show location like the real Yelp app does).
-
-The following **optional** features are implemented:
-
 - [X] Search results page
    - [ ] Infinite scroll for restaurant results.
    - [X] Implement map view of restaurant results.
 - [X] Implement the restaurant detail page.
-
-The following **additional** features are implemented:
-
 - [X] List anything else that you can get done to improve the app functionality!
     - Added more information to the details page such as phone number
     - Added map view in the detail view for that specific restaurant 
     - Used the newest version of the Yelp API (3.0)
     
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
-
-1. 
-2. 
 
 ## Video Walkthrough 
 
@@ -36,10 +24,6 @@ Here's a walkthrough of implemented user stories:
 ![alt tag](https://raw.githubusercontent.com/yelabd/YelpClone/master/demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 
